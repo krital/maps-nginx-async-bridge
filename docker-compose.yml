@@ -1,0 +1,18 @@
+version: '3.9'
+services:
+  nginx:
+    image: openresty/openresty:alpine
+    ports:
+      - "8443:443"
+    volumes:
+      - ./nginx/nginx.conf:/usr/local/openresty/nginx/conf/nginx.conf
+      - ./nginx/lua:/usr/local/openresty/nginx/lua
+      - ./nginx/certs:/etc/nginx/certs:ro
+    depends_on:
+      - maps
+  maps:
+    image: mapsmessaging/server_daemon_3.3.7-snapshot
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./maps/config.yaml:/maps/config.yaml
