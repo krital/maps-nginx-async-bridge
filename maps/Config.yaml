@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  transports:
+    - type: websocket
+    - type: rest
+
+security:
+  enabled: false
+
+messaging:
+  topics:
+    allowDynamic: true
+  persistence:
+    enabled: false
+  subscriptions:
+    allowAnonymous: true
