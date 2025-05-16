@@ -3,10 +3,8 @@ server:
   transports:
     - type: websocket
     - type: rest
-
 security:
   enabled: false
-
 messaging:
   topics:
     allowDynamic: true

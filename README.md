@@ -1,8 +1,11 @@
 # MAPS Messaging Async Bridge
 
-This template bootstraps a protocol-agnostic bridge using MAPS Messaging and NGINX with Lua.
+This project bridges REST to async protocols using MAPS Messaging and NGINX with Lua.
 
-## Run locally
-
+## Quickstart
 ```bash
 docker-compose up --build
+```
+
+## Docs
+See DEPLOYMENT_GUIDE.md for full instructions.
